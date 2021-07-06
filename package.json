@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/utils-reduce",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Apply a function against an accumulator and each element in a collection and return the accumulated result.",
   "license": "Apache-2.0",
   "author": {
