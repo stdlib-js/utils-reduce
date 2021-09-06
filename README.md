@@ -210,6 +210,14 @@ console.log( s );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   [`@stdlib/utils/for-each`][@stdlib/utils/for-each]: invoke a function for each element in a collection.
+-   [`@stdlib/utils/async/reduce`][@stdlib/utils/async/reduce]: apply a function against an accumulator and each element in a collection and return the accumulated result.
+-   [`@stdlib/utils/reduce-right`][@stdlib/utils/reduce-right]: apply a function against an accumulator and each element in a collection and return the accumulated result, iterating from right to left.
+
 </section>
 
 <!-- /.related -->
@@ -278,6 +286,16 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [mdn-object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
 
 [mdn-array-reduce]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
+<!-- <related-links> -->
+
+[@stdlib/utils/for-each]: https://github.com/stdlib-js/utils-for-each
+
+[@stdlib/utils/async/reduce]: https://github.com/stdlib-js/utils-async-reduce
+
+[@stdlib/utils/reduce-right]: https://github.com/stdlib-js/utils-reduce-right
+
+<!-- </related-links> -->
 
 </section>
 
