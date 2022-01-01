@@ -37,14 +37,30 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/assert-is-collection": "^0.0.x",
+    "@stdlib/assert-is-array-like-object": "^0.0.x",
     "@stdlib/assert-is-function": "^0.0.x",
+    "@stdlib/assert-is-ndarray-like": "^0.0.x",
+    "@stdlib/ndarray-base-numel": "^0.0.x",
+    "@stdlib/ndarray-base-vind2bind": "^0.0.x",
     "@stdlib/types": "^0.0.x"
   },
   "devDependencies": {
+    "@stdlib/array-base-filled": "^0.0.x",
+    "@stdlib/array-complex64": "^0.0.x",
+    "@stdlib/array-filled-by": "^0.0.x",
     "@stdlib/array-float64": "^0.0.x",
     "@stdlib/bench": "^0.0.x",
+    "@stdlib/complex-float32": "^0.0.x",
+    "@stdlib/complex-imagf": "^0.0.x",
+    "@stdlib/complex-realf": "^0.0.x",
     "@stdlib/math-base-assert-is-nan": "^0.0.x",
+    "@stdlib/math-base-ops-add": "^0.0.x",
+    "@stdlib/math-base-ops-cadd": "^0.0.x",
+    "@stdlib/math-base-special-pow": "^0.0.x",
+    "@stdlib/ndarray-array": "^0.0.x",
+    "@stdlib/ndarray-ctor": "^0.0.x",
+    "@stdlib/random-base-discrete-uniform": "^0.0.x",
+    "@stdlib/utils-nary-function": "^0.0.x",
     "@stdlib/utils-noop": "^0.0.x",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
@@ -87,7 +103,11 @@
     "typed array",
     "typed",
     "array",
-    "array-like"
+    "array-like",
+    "ndarray",
+    "tensor",
+    "matrix",
+    "vector"
   ],
   "funding": {
     "type": "patreon",
