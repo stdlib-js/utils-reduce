@@ -45,14 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-reduce
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import reduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-reduce@esm/index.mjs';
+var reduce = require( '@stdlib/utils-reduce' );
 ```
 
 #### reduce( arr, initial, reducer\[, thisArg ] )
@@ -73,7 +89,7 @@ var out = reduce( arr, 0, sum );
 The function accepts both array-like objects and [`ndarray`][@stdlib/ndarray/ctor]-like objects.
 
 ```javascript
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
+var array = require( '@stdlib/ndarray-array' );
 
 function sum( accumulator, value ) {
     return accumulator + value;
@@ -138,10 +154,10 @@ var mean = out / ctx.count;
 -   The function supports array-like objects exposing getters and setters for array element access (e.g., [`Complex64Array`][@stdlib/array/complex64], [`Complex128Array`][@stdlib/array/complex128], etc).
 
     ```javascript
-    import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@esm/index.mjs';
-    import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@esm/index.mjs';
-    import realf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-realf@esm/index.mjs';
-    import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@esm/index.mjs';
+    var Complex64Array = require( '@stdlib/array-complex64' );
+    var Complex64 = require( '@stdlib/complex-float32' );
+    var realf = require( '@stdlib/complex-realf' );
+    var imagf = require( '@stdlib/complex-imagf' );
 
     function sum( acc, z ) {
         var re1 = realf( acc );
@@ -179,18 +195,13 @@ var mean = out / ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
-import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@esm/index.mjs';
-import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-add@esm/index.mjs';
-import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
-import reduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-reduce@esm/index.mjs';
+```javascript
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
+var naryFunction = require( '@stdlib/utils-nary-function' );
+var add = require( '@stdlib/math-base-ops-add' );
+var array = require( '@stdlib/ndarray-array' );
+var reduce = require( '@stdlib/utils-reduce' );
 
 function fill( i ) {
     var rand = discreteUniform( -10*(i+1), 10*(i+1) );
@@ -213,10 +224,6 @@ console.log( 'x:' );
 console.log( x.data );
 
 console.log( 'sum: %d', out );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -240,8 +247,9 @@ console.log( 'sum: %d', out );
 ## See Also
 
 -   <span class="package-name">[`@stdlib/utils-for-each`][@stdlib/utils/for-each]</span><span class="delimiter">: </span><span class="description">invoke a function for each element in a collection.</span>
+-   <span class="package-name">[`@stdlib/utils-map`][@stdlib/utils/map]</span><span class="delimiter">: </span><span class="description">apply a function to each element in an array and assign the result to an element in an output array.</span>
 -   <span class="package-name">[`@stdlib/utils-async/reduce`][@stdlib/utils/async/reduce]</span><span class="delimiter">: </span><span class="description">apply a function against an accumulator and each element in a collection and return the accumulated result.</span>
--   <span class="package-name">[`@stdlib/utils-reduce-right`][@stdlib/utils/reduce-right]</span><span class="delimiter">: </span><span class="description">apply a function against an accumulator and each element in a collection and return the accumulated result, iterating from right to left.</span>
+-   <span class="package-name">[`@stdlib/utils-reduce-right`][@stdlib/utils/reduce-right]</span><span class="delimiter">: </span><span class="description">apply a function against an accumulator and each element in an array while iterating from right to left and return the accumulated result.</span>
 
 </section>
 
@@ -256,7 +264,7 @@ console.log( 'sum: %d', out );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -318,19 +326,21 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [mdn-array-reduce]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
 <!-- <related-links> -->
 
-[@stdlib/utils/for-each]: https://github.com/stdlib-js/utils-for-each/tree/esm
+[@stdlib/utils/for-each]: https://github.com/stdlib-js/utils-for-each
 
-[@stdlib/utils/async/reduce]: https://github.com/stdlib-js/utils-async-reduce/tree/esm
+[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map
 
-[@stdlib/utils/reduce-right]: https://github.com/stdlib-js/utils-reduce-right/tree/esm
+[@stdlib/utils/async/reduce]: https://github.com/stdlib-js/utils-async-reduce
+
+[@stdlib/utils/reduce-right]: https://github.com/stdlib-js/utils-reduce-right
 
 <!-- </related-links> -->
 
