@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import reduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-reduce@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/utils-reduce/tags). For example,
+
+```javascript
 import reduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-reduce@v0.2.0-deno/mod.js';
 ```
 
@@ -185,7 +190,7 @@ var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-bas
 import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@deno/mod.js';
 import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-add@deno/mod.js';
 import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@deno/mod.js';
-import reduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-reduce@v0.2.0-deno/mod.js';
+import reduce from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-reduce@deno/mod.js';
 
 function fill( i ) {
     var rand = discreteUniform( -10*(i+1), 10*(i+1) );
