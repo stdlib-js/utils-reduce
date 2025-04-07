@@ -45,38 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/utils-reduce
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-reduce = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-reduce@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var reduce = require( 'path/to/vendor/umd/utils-reduce/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-reduce@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.reduce;
-})();
-</script>
+var reduce = require( '@stdlib/utils-reduce' );
 ```
 
 #### reduce( arr, initial, reducer\[, thisArg ] )
@@ -203,16 +197,11 @@ var mean = out / ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var naryFunction = require( '@stdlib/utils-nary-function' );
-var add = require( '@stdlib/math-base-ops-add' );
+var add = require( '@stdlib/number-float64-base-add' );
 var array = require( '@stdlib/ndarray-array' );
 var reduce = require( '@stdlib/utils-reduce' );
 
@@ -237,11 +226,6 @@ console.log( 'x:' );
 console.log( x.data );
 
 console.log( 'sum: %d', out );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -347,21 +331,21 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [mdn-array-reduce]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/umd
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
 <!-- <related-links> -->
 
-[@stdlib/utils/for-each]: https://github.com/stdlib-js/utils-for-each/tree/umd
+[@stdlib/utils/for-each]: https://github.com/stdlib-js/utils-for-each
 
-[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map/tree/umd
+[@stdlib/utils/map]: https://github.com/stdlib-js/utils-map
 
-[@stdlib/utils/async/reduce]: https://github.com/stdlib-js/utils-async-reduce/tree/umd
+[@stdlib/utils/async/reduce]: https://github.com/stdlib-js/utils-async-reduce
 
-[@stdlib/utils/reduce-right]: https://github.com/stdlib-js/utils-reduce-right/tree/umd
+[@stdlib/utils/reduce-right]: https://github.com/stdlib-js/utils-reduce-right
 
 <!-- </related-links> -->
 
