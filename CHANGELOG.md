@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-03)
+## Unreleased (2026-05-10)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`88c5702`](https://github.com/stdlib-js/stdlib/commit/88c5702417f03ac819a7029fbf7191ddba8a6ac6) - **docs:** improve doctests for complex number typed arrays in `utils/reduce` [(#12069)](https://github.com/stdlib-js/stdlib/pull/12069) _(by Karan Anand)_
 -   [`822fadc`](https://github.com/stdlib-js/stdlib/commit/822fadca5619ac17182fad841af43ec6d1cdd81e) - **bench:** refactor to use string interpolation in `utils` [(#11410)](https://github.com/stdlib-js/stdlib/pull/11410) _(by Karan Anand, Athan Reines)_
 
 </details>
